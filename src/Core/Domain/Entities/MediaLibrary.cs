@@ -1,4 +1,4 @@
-namespace src.Core.Domain.Entity
+namespace src.Core.Domain.Entities
 {
   public class MediaLibrary
   {
@@ -29,7 +29,7 @@ namespace src.Core.Domain.Entity
       Playlists.Add(playlist);
     }
 
-    public void RemovePlaylist(Playlist playlist)
+    public void DeletePlaylist(Playlist playlist)
     {
       Playlists.Remove(playlist);
     }

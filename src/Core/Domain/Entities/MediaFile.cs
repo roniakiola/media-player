@@ -1,4 +1,4 @@
-namespace src.Core.Domain.Entity
+namespace src.Core.Domain.Entities
 {
   public abstract class MediaFile
   {

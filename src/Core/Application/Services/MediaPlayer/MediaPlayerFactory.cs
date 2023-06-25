@@ -1,6 +1,6 @@
-using src.Core.Domain.Entity;
+using src.Core.Domain.Entities;
 
-namespace src.Core.Application.MediaPlayers
+namespace src.Core.Application.Services.MediaPlayer
 {
   public class MediaPlayerFactory
   {
