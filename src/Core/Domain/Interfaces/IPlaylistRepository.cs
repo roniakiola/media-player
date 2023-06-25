@@ -4,8 +4,8 @@ namespace src.Core.Domain.Interfaces
 {
   public interface IPlaylistRepository
   {
-    void CreatePlaylist(Playlist playlist);
-    void DeletePlaylist(Playlist playlist);
+    void AddPlaylist(Playlist playlist);
+    void RemovePlaylist(Playlist playlist);
     Playlist FindPlaylistById(string playlistId);
   }
 }

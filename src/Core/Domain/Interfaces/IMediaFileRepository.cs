@@ -6,6 +6,6 @@ namespace src.Core.Domain.Interfaces
   {
     void AddMediaFile(MediaFile mediaFile);
     void RemoveMediaFile(MediaFile mediaFile);
-    MediaFile findMediaFileById(string mediaId);
+    MediaFile FindMediaFileById(string mediaId);
   }
 }
