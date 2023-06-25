@@ -1,12 +1,48 @@
 using src.Core.Domain.Entities;
+using src.Core.Application.Observers;
 using System.Timers;
 
 namespace src.Core.Application.Services.MediaPlayer
 {
   public abstract class MediaPlayer : IMediaPlayer
   {
+    private List<IMediaPlayerObserver> _observers;
     private System.Timers.Timer timer;
     private int currentPosition;
+
+    public void Subscribe(IMediaPlayerObserver observer)
+    {
+      _observers.Add(observer);
+    }
+
+    public void Unsubscribe(IMediaPlayerObserver observer)
+    {
+      _observers.Remove(observer);
+    }
+
+    protected void NotifyPlay()
+    {
+      foreach (var observer in _observers)
+      {
+        observer.OnPlay();
+      }
+    }
+
+    protected void NotifyPause()
+    {
+      foreach (var observer in _observers)
+      {
+        observer.OnPause();
+      }
+    }
+
+    protected void NotifyStop()
+    {
+      foreach (var observer in _observers)
+      {
+        observer.OnStop();
+      }
+    }
 
     public void Play(MediaFile mediaFile)
     {

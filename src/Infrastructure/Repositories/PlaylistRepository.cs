@@ -48,5 +48,10 @@ namespace src.Infrastructure.Repositories
         return null;
       }
     }
+
+    public List<Playlist> GetAllPlaylists()
+    {
+      return _playlists;
+    }
   }
 }
